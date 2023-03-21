@@ -1,0 +1,284 @@
+/* ect */
+.ect-container {
+  height: 390px;
+  background-image: url(/image/bg_main_business.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ect-contents {
+  padding: 0 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  height: 100%;
+}
+.ect-item {
+  width: 280px;
+  height: 280px;
+  margin: 0 4px;
+  position: relative;
+}
+
+.ect-contents > a {
+  background: url(/image/bg_key_link03.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.ect-contents > a span {
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  top: 0;
+  left: 4px;
+}
+.ect-text {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 15%;
+  line-height: 150%;
+  opacity: 0;
+}
+.ect-contents > a:hover span {
+  background: rgba(45, 91, 121, 0.5);
+  display: block;
+  position: absolute;
+  width: 280px;
+  height: 100%;
+  opacity: 1;
+  top: 0;
+}
+.ect-contents > a:hover .ect-text {
+  opacity: 1;
+}
+
+.ect-card {
+  background-color: #f2f0ed;
+  position: relative;
+}
+.ect-search {
+  background-color: #fff;
+}
+.ect-item h3 {
+  text-align: center;
+  font-size: 24px;
+  color: #2c5b78;
+  height: 65px;
+  line-height: 70px;
+  border-bottom: 1px solid white;
+  font-weight: bold;
+}
+select,
+input {
+  outline: none;
+}
+.ect-items li:hover p {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.ect-items li p {
+  line-height: 138%;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.ect-items li a {
+  font-size: 12px;
+
+  line-height: 0%;
+}
+.ect-item {
+  position: relative;
+}
+.ect-item h5 {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%);
+  font-size: 18px;
+  font-weight: bold;
+}
+.ect-items {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  color: black;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.ect-items li {
+  padding: 16px 28px;
+  border-bottom: 1px solid white;
+}
+.ect-items li:nth-child(2) {
+  border-bottom: none;
+}
+.ect-card .more {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  color: transparent;
+  background-image: url(/image/sp_com.png);
+  background-position: -196px -60px;
+}
+/* search */
+.ect-search {
+  position: relative;
+}
+.ect-search .search {
+  display: flex;
+  padding: 0 22px;
+  flex-direction: column;
+}
+.ect-contents {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.ect-search select,
+.ect-search input,
+.ect-search button {
+  background-color: #f2f0ed;
+  height: 46px;
+  border: none;
+}
+.ect-search select {
+  margin-bottom: 11px;
+  text-indent: 20px;
+  appearance: none;
+}
+
+.ect-search input {
+  text-indent: 20px;
+}
+.ect-search button {
+  margin-top: 30px;
+  text-align: center;
+  background-color: #2c5b78;
+}
+.ect-search button a {
+  color: white;
+}
+.mobile-cards {
+  display: none;
+}
+
+/* footer */
+.footer-top {
+  height: 70px;
+  width: 100%;
+  background-color: #373f43;
+  padding: 0 130px;
+  box-sizing: border-box;
+  position: relative;
+}
+.footer-btm {
+  padding: 0 130px;
+  height: 210px;
+  background-color: #4c5559;
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  line-height: 180%;
+  font-weight: 350;
+  position: relative;
+}
+.footer-top-left {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.footer-top-left li {
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0.65;
+}
+.footer-top-left a {
+  color: white;
+}
+.footer-top-left li:last-child::after {
+  display: none;
+}
+.footer-top-left li::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 8px;
+  background-color: #fff;
+  margin: 0 9px;
+  opacity: 0.5;
+}
+.footer-top-right {
+  color: white;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  right: 130px;
+  top: 0;
+  transform: translateY(25%);
+}
+.footer-top-right select {
+  padding: 0 1rem;
+  width: 200px;
+  appearance: none;
+}
+
+.footer-top-right p {
+  padding: 0.5rem 1rem;
+  background-color: #2a3034;
+  margin: 0 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+.footer-top-right p::after {
+  content: "제품구매 문의는 대리점찾기에서 가까운 매장을 검색 해 주세요";
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.footer-top-right p span {
+  font-size: 12px;
+}
+
+.footer-btm > p {
+  position: absolute;
+  top: 40px;
+  background-color: #fff;
+  background: url(/image/sp_com.png);
+  width: 132px;
+  height: 55px;
+  background-position: -160px 0;
+  color: transparent;
+}
+.footer-btm address span::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 8px;
+  background-color: #fff;
+  margin: 0 9px;
+  opacity: 0.5;
+}
+.footer-btm-text {
+  position: absolute;
+  bottom: 40px;
+  opacity: 0.85;
+}
+.footer-btm-text .address span {
+  font-size: 18px;
+  opacity: 1;
+  font-weight: 500;
+}
+.footer-mobile {
+  display: none;
+}

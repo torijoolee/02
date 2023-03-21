@@ -1,0 +1,157 @@
+.toggle-bar {
+  cursor: pointer;
+}
+.toggle-con {
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  height: 0;
+  transform-origin: top;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+.toggle-con.show {
+  opacity: 1;
+  height: 1000px;
+}
+
+.toggle {
+  position: absolute;
+  top: 60.5px;
+  z-index: 1000;
+  width: 100%;
+}
+
+.toggle-top {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #fff;
+}
+.toggle-top li {
+  margin-right: 10px;
+  font-weight: 400;
+  opacity: 0.65;
+  cursor: pointer;
+}
+details {
+  transition: max-height 0.5s ease-in-out;
+  max-height: 50px;
+  overflow-y: hidden;
+}
+summary {
+  display: block;
+}
+
+.multi-accordion input {
+  display: none;
+}
+label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #244966;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 25px;
+}
+label::before {
+  content: "›";
+  position: relative;
+  bottom: 2px;
+  font-size: xx-large;
+  display: flex;
+  margin-right: 10px;
+  transition: all 0.5s ease-out;
+  opacity: 0.65;
+}
+label::after {
+  content: "";
+  width: 100%;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  border-bottom: 1px solid whitesmoke;
+  opacity: 0.3;
+}
+input:checked + details,
+details:has(input:checked) {
+  max-height: 600px;
+}
+input:checked + details label::before,
+details:has(input:checked) label::before {
+  rotate: 90deg;
+  transition: all 0.5s ease-out;
+}
+
+.panel-heading span {
+  display: block;
+  background-color: #efece8;
+}
+.panel-heading span::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0px;
+  border: 1px solid white;
+  opacity: 0.85;
+}
+.toggle-top li::after {
+  display: inline-block;
+  content: "";
+  width: 1.5px;
+  height: 8px;
+  background-color: black;
+  margin-left: 10px;
+  opacity: 0.3;
+}
+.toggle-top li:last-child::after {
+  display: none;
+}
+
+.panel .panel-heading li {
+  height: 0px;
+  overflow-y: hidden;
+  width: 100%;
+  background-color: #fff;
+  z-index: 300;
+  color: black;
+  font-weight: 400;
+
+  transition: all 0.5s ease-in-out;
+}
+.panel .panel-heading.active li {
+  height: 50px;
+}
+
+.panel .panel-heading li a {
+  opacity: 0.65;
+  margin-left: 50px;
+}
+.panel .panel-heading li a:hover {
+  opacity: 1;
+}
+
+.multi-accordion ul {
+  line-height: 50px;
+  text-indent: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.panel-heading li::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0px;
+  border: 0.5px solid #efece8;
+  opacity: 1;
+}
+.panel-heading li:nth-child(2)::before {
+  opacity: 0;
+}
