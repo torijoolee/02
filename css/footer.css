@@ -1,13 +1,14 @@
 /* ect */
 .ect-container {
   height: 390px;
-  background-image: url(/image/bg_main_business.jpg);
+  background-image: url(/portfolio/02/image/bg_main_business.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
 .ect-contents {
   padding: 0 130px;
   display: flex;
+  flex-shrink: 1;
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
@@ -21,7 +22,7 @@
 }
 
 .ect-contents > a {
-  background: url(/image/bg_key_link03.jpg);
+  background: url(/portfolio/02/image/bg_key_link03.jpg);
   background-position: center;
   background-repeat: no-repeat;
   color: white;
@@ -129,7 +130,7 @@ input {
   background-color: #fff;
   text-align: center;
   color: transparent;
-  background-image: url(/image/sp_com.png);
+  background-image: url(/portfolio/02/image/sp_com.png);
   background-position: -196px -60px;
 }
 /* search */
@@ -172,7 +173,6 @@ input {
 .mobile-cards {
   display: none;
 }
-
 /* footer */
 .footer-top {
   height: 70px;
@@ -254,7 +254,7 @@ input {
   position: absolute;
   top: 40px;
   background-color: #fff;
-  background: url(/image/sp_com.png);
+  background: url(/portfolio/02/image/sp_com.png);
   width: 132px;
   height: 55px;
   background-position: -160px 0;

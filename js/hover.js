@@ -1,6 +1,5 @@
 const menuElems = document.querySelectorAll(".nav-menu");
 const menuCon = document.querySelector(".header-wrap");
-
 const showMenu = document.querySelector(".header-menu");
 
 menuElems.forEach((menu) => {

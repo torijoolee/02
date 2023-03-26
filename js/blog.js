@@ -87,7 +87,4 @@
       smallBlogBar[smallCurrent].classList.add("active");
     }
   }
-  window.onresize = function () {
-    document.location.reload();
-  };
 })();

@@ -5,8 +5,7 @@ html {
 }
 body {
   min-width: 1280px;
-
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 img {
   width: 100%;
@@ -32,7 +31,6 @@ a {
   text-decoration: none;
   color: black;
 }
-
 .hide {
   position: absolute;
   top: -1000px;
@@ -57,7 +55,6 @@ a {
   margin-bottom: 40px;
   opacity: 0.65;
 }
-
 /* contents */
 .product-contents {
   padding: 50px 0 22px 0px;
@@ -97,7 +94,6 @@ a {
   width: 100%;
   margin: auto;
 }
-
 .mag-container .img-btn {
   position: absolute;
   top: 50%;
@@ -128,7 +124,6 @@ button {
 .mag-container .bar-lg {
   pointer-events: none;
 }
-
 .slide-box-item {
   display: flex;
   justify-content: center;
@@ -254,7 +249,6 @@ button {
 
   text-align: center;
 }
-
 .blog-control-bar {
   position: absolute;
   bottom: 50px;
@@ -264,14 +258,12 @@ button {
   opacity: 1;
   cursor: pointer;
 }
-
 .blog-control-bar ul li.active {
   background-color: #2c5b78;
 }
 .blog-control-bar ul li:hover {
   background-color: #2c5b78;
 }
-
 .blog-item:hover h5 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.65);
 }
@@ -323,13 +315,11 @@ button {
 .you-viewport {
   overflow-x: hidden;
 }
-
 .youtube-container {
   display: flex;
   width: 100%;
   margin: 0 auto;
 }
-
 .youtube-contents {
   height: 340px;
   display: flex;

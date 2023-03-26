@@ -16,7 +16,6 @@
     prevBtn.addEventListener("click", function () {
       if (currentPage > 0) {
         currentPage--;
-        console.log(currentPage);
       } else {
         currentPage = totalPage - 1;
       }
@@ -28,7 +27,6 @@
     nextBtn.addEventListener("click", function () {
       if (currentPage < totalPage - 1) {
         currentPage++;
-        console.log(currentPage);
       } else {
         currentPage = 0;
       }
@@ -38,11 +36,10 @@
     });
 
     function changeImage() {
-      visualElem.style.background = `url(/image/${headerBg[currentPage]}) no-repeat 0 0 `;
+      visualElem.style.background = `url( image/${headerBg[currentPage]}) no-repeat 0 0 `;
       visualElem.style.transition = `0.5s`;
     }
     changeImage();
-
     function barActive() {
       visBars.forEach((bar) => {
         bar.classList.remove("active");
@@ -50,7 +47,6 @@
       visBars[currentPage].classList.add("active");
     }
     barActive();
-
     function auto() {
       visBars.forEach((bar) => {
         bar.classList.remove("active");
@@ -59,14 +55,12 @@
       if (currentPage > 3) {
         visBars[currentPage - 1].classList.remove("active");
         currentPage = 0;
-        visualElem.style.background = `url(/image/${headerBg[0]}) no-repeat 0 0 `;
+        visualElem.style.background = `url(image/${headerBg[0]}) no-repeat 0 0 `;
         visBars[currentPage].classList.add("active");
       }
       changeImage();
       visBars[currentPage].classList.add("active");
-      console.log(currentPage);
     }
-
     let interver = setInterval(auto, 3000);
 
     // pause button
@@ -104,7 +98,6 @@
     nextmob.addEventListener("click", function () {
       if (current < addImg.length - 1) {
         current++;
-        console.log(current);
       } else {
         current = 0;
       }
@@ -120,7 +113,7 @@
     });
 
     function changeCurrent() {
-      mobileImg.style.background = `url(/image/${addImg[current]}) no-repeat bottom right`;
+      mobileImg.style.background = `url(image/${addImg[current]}) no-repeat bottom right`;
       mobileImg.style.backgroundSize = `cover`;
       mobileImg.style.transition = "0.5s";
     }
