@@ -9,7 +9,6 @@
     let current = 0;
     let firstView = (container.style.transform = `translateX(${itemWidth}px)`);
     const viewport = document.querySelector(".you-viewport");
-
     container.style.transform = `translateX(${0}px)`;
     viewport.style.background = "transparent";
     viewport.style.width = `${itemWidth * 4}px`;

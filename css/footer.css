@@ -62,7 +62,7 @@
   position: relative;
 }
 .ect-search {
-  background-color: #fff;
+  background-color: #f2f0ed;
 }
 .ect-item h3 {
   text-align: center;
@@ -149,7 +149,7 @@ input {
 .ect-search select,
 .ect-search input,
 .ect-search button {
-  background-color: #f2f0ed;
+  background-color: #fff;
   height: 46px;
   border: none;
 }
@@ -254,7 +254,7 @@ input {
   position: absolute;
   top: 40px;
   background-color: #fff;
-  background: url(image/sp_com.png);
+  background: url(/image/sp_com.png);
   width: 132px;
   height: 55px;
   background-position: -160px 0;
