@@ -6,7 +6,6 @@
     const container = document.querySelector(".blog-contents");
     const blogItem = document.querySelector(".blog-item");
     const itemWidth = blogItem.offsetWidth;
-
     let current = 0;
 
     // viewport
@@ -25,9 +24,9 @@
       blogBar.forEach((bar) => {
         bar.addEventListener("click", (e) => {
           blogBar[i].classList.remove("active");
-          // console.log(e.target.dataset.link);
           current = parseInt(e.target.dataset.link);
-
+          console.log(current);
+          blogBar[current].classList.add("active");
           if (current == 0) {
             container.style.transform = `translateX(0)`;
             container.style.transition = `0.5s`;
@@ -41,7 +40,6 @@
             container.style.transition = `0.5s`;
           }
         });
-        blogBar[current].classList.add("active");
       });
     }
   } else {
@@ -50,6 +48,7 @@
     const smallBlogWidth = document.querySelector(".blog").offsetWidth;
     const blogContainer = document.querySelector(".blog-contents");
     const blogItem = document.querySelector(".blog-item").offsetWidth;
+    const smallBlogBar = document.querySelectorAll(".blog .bar-lg");
 
     let smallCurrent = 0;
 
@@ -57,16 +56,13 @@
     blogSmallView.style.transform = `translateX(32px)`;
     blogSmallView.style.width = `${640 - 64}px`;
 
-    const smallBlogBar = document.querySelectorAll(".blog .bar-lg");
-
     for (let j = 0; j < smallBlogBar.length; j++) {
       smallBlogBar[j].dataset.link = j;
-
       smallBlogBar.forEach((eleme) => {
         eleme.addEventListener("click", function (e) {
           smallBlogBar[j].classList.remove("active");
           smallCurrent = parseInt(e.target.dataset.link);
-          console.log(smallCurrent);
+          smallBlogBar[smallCurrent].classList.add("active");
           if (smallCurrent == 0) {
             blogContainer.style.transform = `translateX(${0}px)`;
           }
@@ -84,7 +80,6 @@
           }
         });
       });
-      smallBlogBar[smallCurrent].classList.add("active");
     }
   }
 })();

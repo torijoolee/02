@@ -62,8 +62,8 @@
     if (currentPage < 0 || slideItem[currentPage] === "null") {
       return;
     }
-    slideBox.style.transition = "transform 0.5s ease-in-out";
     currentPage--;
+    slideBox.style.transition = "transform 0.5s ease-in-out";
     slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
     jump();
   });
