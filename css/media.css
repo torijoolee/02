@@ -63,7 +63,7 @@
     transform: translateY(-50%);
     width: 18px;
     height: 32px;
-    background-image: url(/portfolio/02/image/sp_com.png);
+    background-image: url(/image/sp_com.png);
   }
   .mobile-visual .prev {
     left: 15px;

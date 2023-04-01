@@ -16,23 +16,27 @@
     prevBtn.addEventListener("click", function () {
       if (currentPage > 0) {
         currentPage--;
+        console.log(currentPage);
       } else {
         currentPage = totalPage - 1;
+        console.log(currentPage);
       }
       changeImage();
       barActive();
-      clearInterval(auto);
+      // clearInterval(auto);
     });
 
     nextBtn.addEventListener("click", function () {
       if (currentPage < totalPage - 1) {
         currentPage++;
+        console.log(currentPage);
       } else {
         currentPage = 0;
+        console.log(currentPage);
       }
       changeImage();
       barActive();
-      clearInterval(auto);
+      // clearInterval(auto);
     });
 
     function changeImage() {
@@ -40,28 +44,37 @@
       visualElem.style.transition = `0.5s`;
     }
     changeImage();
+
     function barActive() {
-      visBars.forEach((bar) => {
-        bar.classList.remove("active");
-      });
-      visBars[currentPage].classList.add("active");
+      for (let i = 0; i < totalPage; i++) {
+        visBars[i].dataset.index = i;
+        if (currentPage == visBars[i].dataset.index) {
+          visBars[currentPage].classList.add("active");
+        } else {
+          visBars[i].classList.remove("active");
+        }
+      }
     }
     barActive();
-    function auto() {
-      visBars.forEach((bar) => {
-        bar.classList.remove("active");
-      });
-      currentPage++;
-      if (currentPage > 3) {
-        visBars[currentPage - 1].classList.remove("active");
-        currentPage = 0;
-        visualElem.style.background = `url(image/${headerBg[0]}) no-repeat 0 0 `;
-        visBars[currentPage].classList.add("active");
-      }
-      changeImage();
-      visBars[currentPage].classList.add("active");
-    }
-    let interver = setInterval(auto, 3000);
+    // visBars.forEach((bar) => {
+    //   bar.classList.remove("active");
+    // });
+
+    // function auto() {
+    //   visBars.forEach((bar) => {
+    //     bar.classList.remove("active");
+    //   });
+    //   currentPage++;
+    //   if (currentPage > 3) {
+    //     visBars[currentPage - 1].classList.remove("active");
+    //     currentPage = 0;
+    //     visualElem.style.background = `url(image/${headerBg[0]}) no-repeat 0 0 `;
+    //     visBars[currentPage].classList.add("active");
+    //   }
+    //   changeImage();
+    //   visBars[currentPage].classList.add("active");
+    // }
+    // let interver = setInterval(auto, 3000);
 
     // pause button
     stopBtn.addEventListener("click", function () {
