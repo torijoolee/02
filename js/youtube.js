@@ -2,7 +2,6 @@
   if (matchMedia("screen and (min-width: 640px)").matches) {
     // 640px 이상에서 사용할 JavaScript
     // viewport
-
     const desktopWidth = document.querySelector(".youtube").offsetWidth;
     const youtubeBar = document.querySelectorAll(".youtube .bar-lg");
     let container = document.querySelector(".youtube-container");
@@ -12,10 +11,8 @@
     const viewport = document.querySelector(".you-viewport");
 
     container.style.transform = `translateX(${0}px)`;
-
     viewport.style.background = "transparent";
     viewport.style.width = `${itemWidth * 4}px`;
-
     viewport.style.transform = `translateX(${
       (desktopWidth - itemWidth * 4) / 2
     }px)`;
@@ -27,7 +24,7 @@
         bar.addEventListener("click", (e) => {
           youtubeBar[i].classList.remove("active");
           current = parseInt(e.target.dataset.link);
-
+          youtubeBar[current].classList.add("active");
           if (current == 0) {
             container.style.transform = `translateX(${0}px)`;
             container.style.transition = `0.5s`;
@@ -41,7 +38,6 @@
             container.style.transition = `0.5s`;
           }
         });
-        youtubeBar[current].classList.add("active");
       });
     }
   } else {
@@ -51,7 +47,6 @@
     const smallyouItem = document.querySelector(".you-item").offsetWidth;
     let smallCurrent = 0;
     const smallContainer = document.querySelector(".youtube-container");
-
     smallView.style.transform = `translateX(${32}px)`;
     smallView.style.width = `${smallyouItem * 2}px`;
 
@@ -65,6 +60,7 @@
           smallyouControl[j].classList.remove("active");
           console.log(e.target.dataset.index);
           smallCurrent = parseInt(e.target.dataset.index);
+          smallyouControl[smallCurrent].classList.add("active");
 
           if (smallCurrent == 0) {
             smallContainer.style.transform = `translateX(0)`;
@@ -83,7 +79,6 @@
             smallContainer.style.transition = "0.5s";
           }
         });
-        smallyouControl[smallCurrent].classList.add("active");
       });
     }
   }
