@@ -23,7 +23,6 @@
       }
       changeImage();
       barActive();
-      // clearInterval(auto);
     });
 
     nextBtn.addEventListener("click", function () {
@@ -36,7 +35,6 @@
       }
       changeImage();
       barActive();
-      // clearInterval(auto);
     });
 
     function changeImage() {
@@ -44,7 +42,7 @@
       visualElem.style.transition = `0.5s`;
     }
     changeImage();
-
+    // bar-active
     function barActive() {
       for (let i = 0; i < totalPage; i++) {
         visBars[i].dataset.index = i;
@@ -56,25 +54,18 @@
       }
     }
     barActive();
-    // visBars.forEach((bar) => {
-    //   bar.classList.remove("active");
-    // });
-
-    // function auto() {
-    //   visBars.forEach((bar) => {
-    //     bar.classList.remove("active");
-    //   });
-    //   currentPage++;
-    //   if (currentPage > 3) {
-    //     visBars[currentPage - 1].classList.remove("active");
-    //     currentPage = 0;
-    //     visualElem.style.background = `url(image/${headerBg[0]}) no-repeat 0 0 `;
-    //     visBars[currentPage].classList.add("active");
-    //   }
-    //   changeImage();
-    //   visBars[currentPage].classList.add("active");
-    // }
-    // let interver = setInterval(auto, 3000);
+    // auto play
+    function auto() {
+      changeImage();
+      console.log(currentPage);
+      barActive();
+      currentPage++;
+      if (currentPage > 3) {
+        currentPage = 0;
+        visualElem.style.background = `url(image/${headerBg[0]}) no-repeat 0 0 `;
+      }
+    }
+    let interver = setInterval(auto, 3000);
 
     // pause button
     stopBtn.addEventListener("click", function () {
