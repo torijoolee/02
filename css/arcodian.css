@@ -121,7 +121,7 @@ details:has(input:checked) label::before {
 
 .panel .panel-heading li {
   height: 0px;
-  overflow-y: hidden;
+  overflow: hidden;
   width: 100%;
   background-color: #fff;
   z-index: 300;

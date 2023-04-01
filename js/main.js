@@ -16,10 +16,8 @@
     prevBtn.addEventListener("click", function () {
       if (currentPage > 0) {
         currentPage--;
-        console.log(currentPage);
       } else {
         currentPage = totalPage - 1;
-        console.log(currentPage);
       }
       changeImage();
       barActive();
@@ -28,10 +26,8 @@
     nextBtn.addEventListener("click", function () {
       if (currentPage < totalPage - 1) {
         currentPage++;
-        console.log(currentPage);
       } else {
         currentPage = 0;
-        console.log(currentPage);
       }
       changeImage();
       barActive();
@@ -57,7 +53,6 @@
     // auto play
     function auto() {
       changeImage();
-      console.log(currentPage);
       barActive();
       currentPage++;
       if (currentPage > 3) {
@@ -91,16 +86,17 @@
     const prevmob = document.querySelector(".mobile-visual .prev");
     const nextmob = document.querySelector(".mobile-visual .next");
 
-    let current = 0;
-    const addImg = [
+    let addImg = [
       "m_main01.jpg",
       "m_main02.jpg",
       "m_main03.jpg",
       "m_main04.jpg",
     ];
+    let current = 0;
+    let totalPage = addImg.length;
 
     nextmob.addEventListener("click", function () {
-      if (current < addImg.length - 1) {
+      if (current < totalPage - 1) {
         current++;
       } else {
         current = 0;
@@ -111,7 +107,7 @@
       if (current > 0) {
         current--;
       } else {
-        current = addImg.length - 1;
+        current = totalPage - 1;
       }
       changeCurrent();
     });
